@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!--
+    This html program generates a secure password based on criteria selected by the user.
+    Initial ideas for this html/css/javascript came from the Youtube https://www.youtube.com/watch?v=fOvYE1i_IiY and https://www.youtube.com/watch?v=OCVgC2TEJwI
+    Discussions with other members of the team helped me to take it one step further.  To make use of cards.
+
+-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,27 +20,29 @@
 </head>
 
 <body>
-    <main class="wrapper">
-        <header>
-            <h1>Password Generator</h1>
-        </header>
+    <main class="container container-fluid">
+        <div class="wrapper">
+            <header>
+                <h1>Password Generator</h1>
+            </header>
 
-        <div class="card">
-            <div class="card-header">
-                <h2>Generate a Password</h2>
-            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2>Generate a Password</h2>
+                </div>
 
-            <div class="card-body">
-                <textarea
-                    readonly
-                    id="password"
-                    placeholder="Your Secure Password"
-                    aria-label="Generated Password"
-                ></textarea>
-            </div>
-            
-            <div class="card-footer">
-                <button id="generate" class="btn">Generate Password</button>
+                <div class="card-body">
+                    <textarea
+                        readonly
+                        id="password"
+                        placeholder="Your Secure Password"
+                        aria-label="Generated Password"
+                    ></textarea>
+                </div>
+                
+                <div class="card-footer">
+                    <button id="generate" class="btn">Generate Password</button>
+                </div>
             </div>
         </div>
     </main>
