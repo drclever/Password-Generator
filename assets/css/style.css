@@ -111,15 +111,41 @@ h1, h2 {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
-  text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 1.2rem;
+  text-align: center;
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
   resize: none;
   overflow: hidden;
 }
+
+/* A Media Query max-width: 576px */
+@media screen and (max-width: 576px) {
+/* Resized content to fit 576px  */
+    body {
+        max-width: 576px;
+    }
+
+    /* Styles for the wrapper div */
+    .wrapper {
+        width: 100%;
+    }
+}
+
+/* A Media Query max-width: 400px */
+@media screen and (max-width: 400px) {
+  /* Resized content to fit 400px  */
+      body {
+          max-width: 400px;
+      }
+  
+      /* Styles for the wrapper div */
+      .wrapper {
+          width: 100%;
+      }
+  }
 
 @media screen and (max-width: 600px) {
   div.card-header {
