@@ -102,7 +102,7 @@ h1, h2 {
   float: right;
 }
 
-#password {
+#genpassword {
   appearance: none;
   border: none;
   display: block;

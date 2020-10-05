@@ -1,9 +1,9 @@
 //Assignment Code + Event Listener to prompt questions when button pushed
 document.querySelector("#generate").addEventListener("click", writePassword);
 
-// Various Arrays 
+// Various Arrays (Numbers, Special Characters, Lower case alphabet, Upper case alphabet)
 var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "<", ">", "?","~"];
+var specialChar = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
 var alphaLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var alphaUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
@@ -18,7 +18,7 @@ var psdLowerCase;
 function generatePassword() {
     var psdLength = '';
     
-    //Ask user to input desired character length
+    //Prompt user to input desired character length (Validate that entry is numeric and between 8 to 128 characters).  Cancel will exit prompts.
     while (isNaN(psdLength) || psdLength < 8 || psdLength > 128) {
         psdLength = prompt("What length would you like the password to be? (Between 8 to 128 characters)");
 
@@ -37,21 +37,21 @@ function generatePassword() {
     alert(`Your password will have ${psdLength} characters`);
 
     // Determine parameters of password 
-    var psdSpecialChar = confirm("Click OK to confirm if you would like to include special characters");
-    var psdNumericChar = confirm("Click OK to confirm if you would like to include numeric characters");    
-    var psdLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-    var psdUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");
+    var psdSpecialChar = confirm("Click OK to confirm if you want to include special characters");
+    var psdNumericChar = confirm("Click OK to confirm if you want to include numeric characters");    
+    var psdLowerCase = confirm("Click OK to confirm if you want to include lowercase characters");
+    var psdUpperCase = confirm("Click OK to confirm if you want to include uppercase characters");
 
     // Loop if answer is outside the parameters 
     while(psdUpperCase === false && psdLowerCase === false && psdSpecialChar === false && psdNumericChar === false) {
         alert("You must choose at least one parameter");
-        var psdSpecialChar = confirm("Click OK to confirm if you would like to include special characters");
-        var psdNumericChar = confirm("Click OK to confirm if you would like to include numeric characters");    
-        var psdLowerCase = confirm("Click OK to confirm if you would like to include lowercase characters");
-        var psdUpperCase = confirm("Click OK to confirm if you would like to include uppercase characters");   
+        var psdSpecialChar = confirm("Click OK to confirm if you want to include special characters");
+        var psdNumericChar = confirm("Click OK to confirm if you want to include numeric characters");    
+        var psdLowerCase = confirm("Click OK to confirm if you want to include lowercase characters");
+        var psdUpperCase = confirm("Click OK to confirm if you want to include uppercase characters");   
     } 
 
-    // Assign an action to the password parameters NEED TO FIX THIS
+    // Merge the criteria arrays into one big array.  Could have created the above array at the top.  However, I wanted modularity.
     var psdCharacters = []
       
     if (psdSpecialChar) {
@@ -70,7 +70,7 @@ function generatePassword() {
         psdCharacters = psdCharacters.concat(alphaUpper)
     }
 
-    // Empty string to be filled based on for loop selecting random characters from the array
+    // Create random password from the concatenated array.
     var randomPassword = ""
       
     for (var i = 0; i < psdLength; i++) {
@@ -79,10 +79,8 @@ function generatePassword() {
     return randomPassword;
 }
 
-// Write password to the #password input
+// Write password to the #genpassword (Generated Password) input
 function writePassword() {
     var password = generatePassword();
-    var passwordText = document.querySelector("#password");
-
-    passwordText.value = password;
+    document.querySelector("#genpassword").value = password;
 }
