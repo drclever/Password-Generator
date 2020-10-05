@@ -5,14 +5,13 @@
     This html program generates a secure password based on criteria selected by the user.
     Initial ideas for this html/css/javascript came from the Youtube https://www.youtube.com/watch?v=fOvYE1i_IiY and https://www.youtube.com/watch?v=OCVgC2TEJwI plus other websites.
     Discussions with other members of the team helped me to take it one step further.  To make use of cards.
-
 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="Description" content="Enter your description here"/>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -37,7 +36,7 @@
                 <div class="card-body">
                     <textarea
                         readonly
-                        id="genpassword"
+                        id="genPassword"
                         placeholder="Your Secure Password"
                         aria-label="Generated Password"
                     ></textarea>
@@ -52,10 +51,11 @@
     </main>
 
     <!--Put Javascript logic into its own file,  That logic will actually calculate the random password-->
-    <script src="script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>

@@ -80,7 +80,7 @@ function generatePassword() {
         randomPassword = randomPassword + alphaLower[Math.floor(Math.random() * alphaLower.length)];
     }
 
-    // Create random password from the concatenated array.
+    // Complete the creation of the random password from the concatenated array to the specified length.  Note that the characters at the beginning have already been determined by the criteria specified.  That is why we are starting with criteriaTotal position.
       
     for (var i = criteriaTotal; i < pswdLength; i++) {
         randomPassword = randomPassword + pswdCharacters[Math.floor(Math.random() * pswdCharacters.length)];
