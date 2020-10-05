@@ -3,7 +3,7 @@
 
 <!--
     This html program generates a secure password based on criteria selected by the user.
-    Initial ideas for this html/css/javascript came from the Youtube https://www.youtube.com/watch?v=fOvYE1i_IiY and https://www.youtube.com/watch?v=OCVgC2TEJwI
+    Initial ideas for this html/css/javascript came from the Youtube https://www.youtube.com/watch?v=fOvYE1i_IiY and https://www.youtube.com/watch?v=OCVgC2TEJwI plus other websites.
     Discussions with other members of the team helped me to take it one step further.  To make use of cards.
 
 -->
@@ -16,21 +16,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Password Generator</title>
+    <title>Random Password Generator</title>
 </head>
 
 <body>
+    <!-- Main Section of the code using Bootstrap Card Logic -->
     <main class="container container-fluid">
         <div class="wrapper">
             <header>
                 <h1>Password Generator</h1>
             </header>
 
+            <!--Divide screen into header, body and footer (Which contains the button)-->
             <div class="card">
                 <div class="card-header">
                     <h2>Generate a Password</h2>
                 </div>
 
+                <!--Random Password will be displayed here-->
                 <div class="card-body">
                     <textarea
                         readonly
@@ -40,6 +43,7 @@
                     ></textarea>
                 </div>
                 
+                <!--Button to click-->
                 <div class="card-footer">
                     <button id="generate" class="btn">Generate Password</button>
                 </div>
@@ -47,6 +51,7 @@
         </div>
     </main>
 
+    <!--Put Javascript logic into its own file,  That logic will actually calculate the random password-->
     <script src="script.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
