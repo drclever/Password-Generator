@@ -102,7 +102,7 @@ h1, h2 {
   float: right;
 }
 
-#genpassword {
+#genPassword {
   appearance: none;
   border: none;
   display: block;
@@ -131,6 +131,7 @@ h1, h2 {
     /* Styles for the wrapper div */
     .wrapper {
         width: 100%;
+        margin: 0 auto;
     }
 }
 
@@ -144,11 +145,20 @@ h1, h2 {
       /* Styles for the wrapper div */
       .wrapper {
           width: 100%;
+          margin: 0 auto;
       }
   }
 
+/* A Media Query max-width: 600px */
 @media screen and (max-width: 600px) {
-  div.card-header {
-    font-size: 20%;
+  /* Resized content to fit 600px  */
+      body {
+          max-width: 600px;
+      }
+  
+      /* Styles for the wrapper div */
+      .wrapper {
+          width: 100%;
+          margin: 0 auto;
+      }
   }
-}
