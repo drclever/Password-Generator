@@ -15,6 +15,7 @@ body,
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -121,44 +122,20 @@ h1, h2 {
   overflow: hidden;
 }
 
-/* A Media Query max-width: 576px */
-@media screen and (max-width: 576px) {
-/* Resized content to fit 576px  */
-    body {
-        max-width: 576px;
-    }
+/* .container {
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+} */
 
+/* A Media Query max-width: 960px */
+@media screen and (max-width: 960px) {
+ 
     /* Styles for the wrapper div */
-    .wrapper {
-        width: 100%;
-        margin: 0 auto;
-    }
+        .container {
+            width: auto;
+            margin: 0 auto;
+        }
 }
-
-/* A Media Query max-width: 400px */
-@media screen and (max-width: 400px) {
-  /* Resized content to fit 400px  */
-      body {
-          max-width: 400px;
-      }
-  
-      /* Styles for the wrapper div */
-      .wrapper {
-          width: 100%;
-          margin: 0 auto;
-      }
-  }
-
-/* A Media Query max-width: 600px */
-@media screen and (max-width: 600px) {
-  /* Resized content to fit 600px  */
-      body {
-          max-width: 600px;
-      }
-  
-      /* Styles for the wrapper div */
-      .wrapper {
-          width: 100%;
-          margin: 0 auto;
-      }
-  }

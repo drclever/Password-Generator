@@ -90,6 +90,6 @@ function generatePassword() {
 
 // Write password to the #genpassword (Generated Password) input
 function writePassword() {
-    var password = generatePassword();
+    let password = generatePassword();
     document.querySelector("#genPassword").value = password;
 }
